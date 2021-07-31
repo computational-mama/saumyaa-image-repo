@@ -18,50 +18,52 @@ function preload() {
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-textSize(32)
+	textSize(32)
 }
 
 function draw() {
 	background('#69c3aa');
 	for(let r = 0; r < table.getRowCount(); r++) {
-		text(table.get(r, 0), 500, 60+r * 40);
+		text(table.get(r, 0), 500, 60+r * 60);
 
 		let num = table.get(r,3)
 		let imgin;
+		circle(750,60+r * 60,table.get(r,1))
 		
 		if(num==78){
 		imgin = thumbsup
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
+		
 		}
 		
 		if(num==76){
 		imgin = happy
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 		
 		if(num==72){
 		imgin = smiling
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 		
 		if(num > 70 && num < 73){
 		imgin = smiling
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 		
 		if(num > 66 && num < 70){
 		imgin = straightFace
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 		
 		if(num > 54 && num < 58){
 		imgin = upset
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 		
 		if(num==44){
 		imgin = veryUpset
-		image(imgin, width / 2, r * 40,40,40);
+		image(imgin, width / 2+50, r * 60,60,60);
 		}
 	}
 
